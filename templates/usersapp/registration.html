@@ -1,0 +1,139 @@
+{% extends "usersapp/base.html" %}
+{% block content %}
+  {% load static %}
+    <main >
+        <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Registration</h4>
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="row g-3">
+
+                    <!-- First Name -->
+                    <div class="col-sm-4">
+                        <label for="fname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <!-- Middle Name -->
+                    <div class="col-sm-4">
+                        <label for="mname" class="form-label">Middle Name</label>
+                        <input type="text" class="form-control" id="mname" name="mname" placeholder="Middle Name">
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="col-sm-4">
+                        <label for="lname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" required>
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+
+                    <!-- Course -->
+                    <div class="col-md-6">
+                        <label for="course" class="form-label">Course</label>
+                        <select class="form-select" id="course" name="course" required>
+                            <option value="">Choose...</option>
+                            <option value="java">Java Development</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="full-stack">Full Stack Development</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a course.
+                        </div>
+                    </div>
+
+                    <!-- Qualification -->
+                    <div class="col-md-6">
+                        <label for="qualification" class="form-label">Qualification</label>
+                        <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required>
+                        <div class="invalid-feedback">
+                            Qualification is required.
+                        </div>
+                    </div>
+
+                    <!-- Background -->
+                    <div class="col-md-6">
+                        <label for="background" class="form-label">Background</label>
+                        <select class="form-select" id="background" name="background" required>
+                            <option value="">Choose...</option>
+                            <option value="it">IT</option>
+                            <option value="non-it">Non-IT</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select your background.
+                        </div>
+                    </div>
+
+                    <!-- Batch -->
+                    <div class="col-md-6">
+                        <label for="batch" class="form-label">Batch</label>
+                        <select class="form-select" id="batch" name="batch" required>
+                            <option value="">Choose...</option>
+                            <option value="morning">Morning Batch</option>
+                            <option value="afternoon">Afternoon Batch</option>
+                            <option value="evening">Evening Batch</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select your batch.
+                        </div>
+                    </div>
+
+                    <!-- Year of Passing -->
+                    <div class="col-md-6">
+                        <label for="passingyear" class="form-label">Year of Passing</label>
+                        <select class="form-select" id="passingyear" name="passingyear" required>
+                            <option value="">Choose...</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select your year of passing.
+                        </div>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="col-md-6">
+                        <label for="mobnumber" class="form-label">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobnumber" name="mobnumber" placeholder="Mobile Number" required>
+                        <div class="invalid-feedback">
+                            Valid mobile number is required.
+                        </div>
+                    </div>
+
+                    <!-- District -->
+                    <div class="col-md-6">
+                        <label for="district" class="form-label">District</label>
+                        <select class="form-select" id="district" name="district" required>
+                            <option value="">Choose...</option>
+                            <option value="pune">Pune</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="nagpur">Nagpur</option>
+                            <option value="nashik">Nashik</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select your district.
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                <button class="w-100 btn btn-primary btn-sm" type="submit">Register</button>
+            </form>
+        </div>
+    </main>
+    {% endblock%}

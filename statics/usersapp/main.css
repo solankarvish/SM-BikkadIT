@@ -1,0 +1,106 @@
+/*
+ * Globals
+ */
+
+/* Set a consistent background for the entire page */
+body, html {
+  background: linear-gradient(to bottom right, #e6ecee, #dae0e7); /* Global background gradient */
+  color: #fff; /* Text color for dark backgrounds */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  margin: 0;
+  height: 100%; /* Ensure it covers the full viewport */
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll caused by elements */
+}
+
+/* Reset section backgrounds to be transparent */
+header, footer, main, section, .cover-container, .text-bg-dark {
+  background: transparent !important; /* Inherit global background */
+}
+
+/* Custom button styles */
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+  color: #120606;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+/*
+ * Header
+ */
+header {
+  padding: 1rem;
+}
+
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, 0.8); /* Link color */
+  border-bottom: 0.25rem solid transparent;
+  transition: border-bottom-color 0.3s, color 0.3s; /* Smooth hover effects */
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/*
+ * Footer
+ */
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8); /* Slightly dimmed footer text */
+}
+
+/*
+ * Content Area
+ */
+.cover-container {
+  max-width: 42em;
+  padding: 2rem;
+}
+
+/* Optional: Adjust text-shadow for better contrast in dark backgrounds */
+.text-bg-dark {
+  text-shadow: 0 0.1rem 0.2rem rgba(25, 17, 17, 0.5);
+  box-shadow: inset 0 0 5rem rgba(22, 6, 6, 0.5);
+}
+
+/*
+ * Logo (Mobile)
+ */
+.logo-mobile {
+  display: block;
+  position: relative;
+  height: 100%;
+  padding-right: 25px;
+  flex-grow: 1;
+}
+
+.logo-mobile a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Ensure the logo text matches the page style */
+}
+
+.logo-mobile img {
+  max-width: calc(100% - 20px);
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
